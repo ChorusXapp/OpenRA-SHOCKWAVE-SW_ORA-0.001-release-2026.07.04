@@ -1,0 +1,228 @@
+Container@MAP_PREVIEW:
+	Logic: MapPreviewLogic
+	Width: PARENT_WIDTH
+	Height: PARENT_HEIGHT
+	Children:
+		Container@MAP_LARGE:
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
+			Children:
+				Background@MAP_BG:
+					X: (PARENT_WIDTH - WIDTH) / 2
+					Width: PARENT_HEIGHT - 53
+					Height: PARENT_HEIGHT - 53
+					Background: panel-gray
+					Children:
+						MapPreview@MAP_PREVIEW:
+							X: 1
+							Y: 1
+							Width: PARENT_WIDTH - 2
+							Height: PARENT_HEIGHT - 2
+							TooltipContainer: TOOLTIP_CONTAINER
+				LabelWithTooltip@MAP_TITLE:
+					Y: PARENT_HEIGHT - 54
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Bold
+					Align: Center
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: SIMPLE_TOOLTIP
+		Container@MAP_SMALL:
+			Visible: false
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
+			Children:
+				Background@MAP_BG:
+					X: (PARENT_WIDTH - WIDTH) / 2
+					Width: PARENT_HEIGHT - 100
+					Height: PARENT_HEIGHT - 100
+					Background: panel-gray
+					Children:
+						MapPreview@MAP_PREVIEW:
+							X: 1
+							Y: 1
+							Width: PARENT_WIDTH - 2
+							Height: PARENT_HEIGHT - 2
+							TooltipContainer: TOOLTIP_CONTAINER
+				LabelWithTooltip@MAP_TITLE:
+					Y: PARENT_HEIGHT - 101
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Bold
+					Align: Center
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: SIMPLE_TOOLTIP
+		Container@MAP_AVAILABLE:
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
+			Children:
+				Label@MAP_TYPE:
+					Y: PARENT_HEIGHT - 39
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: TinyBold
+					Align: Center
+					IgnoreMouseOver: true
+				Label@MAP_AUTHOR:
+					Y: PARENT_HEIGHT - 26
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Tiny
+					Align: Center
+		Container@MAP_INCOMPATIBLE:
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
+			Children:
+				Label@MAP_STATUS_A:
+					Y: PARENT_HEIGHT - 39
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Tiny
+					Align: Center
+					Text: label-map-incompatible-status-a
+					IgnoreMouseOver: true
+				Label@MAP_STATUS_B:
+					Y: PARENT_HEIGHT - 26
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Tiny
+					Align: Center
+					Text: label-map-incompatible-status-b
+		Container@MAP_VALIDATING:
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
+			Children:
+				Label@MAP_STATUS_VALIDATING:
+					Y: PARENT_HEIGHT - 99
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Tiny
+					Align: Center
+					Text: label-map-validating-status
+					IgnoreMouseOver: true
+				ProgressBar@MAP_VALIDATING_BAR:
+					Y: PARENT_HEIGHT - 79
+					Width: PARENT_WIDTH
+					Height: 25
+					Indeterminate: True
+		Container@MAP_GENERATING:
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
+			Children:
+				Label@MAP_STATUS_GENERATING:
+					Y: PARENT_HEIGHT - 99
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Tiny
+					Align: Center
+					Text: label-map-generating-status
+					IgnoreMouseOver: true
+				ProgressBar@MAP_GENERATING_BAR:
+					Y: PARENT_HEIGHT - 79
+					Width: PARENT_WIDTH
+					Height: 25
+					Indeterminate: True
+		Container@MAP_DOWNLOAD_AVAILABLE:
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
+			Children:
+				Label@MAP_TYPE:
+					Y: PARENT_HEIGHT - 92
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: TinyBold
+					Align: Center
+					IgnoreMouseOver: true
+				Label@MAP_AUTHOR:
+					Y: PARENT_HEIGHT - 79
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Tiny
+					Align: Center
+				Button@MAP_INSTALL:
+					Y: PARENT_HEIGHT - 56
+					Width: PARENT_WIDTH
+					Height: 25
+					Text: button-map-download-available-install
+		Button@MAP_UPDATE:
+			Y: PARENT_HEIGHT - 55
+			Width: PARENT_WIDTH
+			Height: 25
+			Text: button-map-preview-update
+		Container@MAP_UPDATE_DOWNLOAD_AVAILABLE:
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
+			Children:
+				Button@MAP_INSTALL:
+					Y: PARENT_HEIGHT - 80
+					Width: PARENT_WIDTH
+					Height: 25
+					Text: button-map-update-download-available-install
+		Label@MAP_SEARCHING:
+			Y: PARENT_HEIGHT - 92
+			Width: PARENT_WIDTH
+			Height: 25
+			Font: Tiny
+			Align: Center
+			Text: label-map-preview-searching
+			IgnoreMouseOver: true
+		Container@MAP_UNAVAILABLE:
+			Width: PARENT_WIDTH
+			Children:
+				Label@a:
+					Y: PARENT_HEIGHT - 92
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: TinyBold
+					Align: Center
+					Text: label-map-unavailable-a
+				Label@b:
+					Y: PARENT_HEIGHT - 79
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: TinyBold
+					Align: Center
+					Text: label-map-unavailable-b
+		Label@MAP_ERROR:
+			Y: PARENT_HEIGHT - 92
+			Width: PARENT_WIDTH
+			Height: 25
+			Font: Tiny
+			Align: Center
+			Text: label-map-preview-error
+		Container@MAP_DOWNLOADING:
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
+			Children:
+				Label@MAP_STATUS_DOWNLOADING:
+					Y: PARENT_HEIGHT - 92
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Tiny
+					Align: Center
+				ProgressBar@MAP_PROGRESSBAR:
+					Y: PARENT_HEIGHT - 56
+					Width: PARENT_WIDTH
+					Height: 25
+					Indeterminate: True
+		Button@MAP_RETRY:
+			Y: PARENT_HEIGHT - 56
+			Width: PARENT_WIDTH
+			Height: 25
+		Container@MAP_UPDATE_AVAILABLE:
+			Width: PARENT_WIDTH
+			Children:
+				Label@a:
+					Y: PARENT_HEIGHT - 92
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Tiny
+					Align: Center
+					Text: label-map-update-available-a
+				Label@b:
+					Y: PARENT_HEIGHT - 79
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Tiny
+					Align: Center
+					Text: label-map-update-available-b
